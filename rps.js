@@ -20,9 +20,7 @@ const scissors = "scissors";
 const options = ['rock','paper','scissors']
 
 getComputerChoice = options[Math.floor(Math.random()*options.length)]
-
-
-console.log(getComputerChoice)
+console.log(getComputerChoice + " computers choice")
 
 
 
@@ -45,7 +43,7 @@ Test what your function returns by using console.log. */
 
 
 getHumanChoice = window.prompt("rock, paper or scissors?");
-  console.log(getHumanChoice);
+  console.log(getHumanChoice + " humans choice");
 
 
 
