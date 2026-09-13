@@ -44,8 +44,8 @@ Test what your function returns by using console.log. */
 // test what getHumanChoice returns with console.log //   
 
 
-
-
+getHumanChoice = window.prompt("rock, paper or scissors?");
+  console.log(getHumanChoice);
 
 
 
