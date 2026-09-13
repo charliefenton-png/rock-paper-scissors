@@ -22,18 +22,26 @@ const options = ['rock','paper','scissors']
 getComputerChoice = options[Math.floor(Math.random()*options.length)]
 
 
-
-
-
-
-
-
-
-
 console.log(getComputerChoice)
 
 
 
+/* Create a new function named getHumanChoice.
+Write the code so that getHumanChoice will return one of the valid choices
+depending on what the user inputs.
+Hint: Use the prompt method to get the user’s input.
+You do not need to handle reprompting if the user enters an invalid input, 
+as that would require things we will teach later. For now, 
+just assume the user will always enter a valid choice.
+Test what your function returns by using console.log. */
+
+
+
+// create function getHumanChoice //
+/* make getHumanChoice return rock, paper or scissors using prompt method to return
+     user input choice */
+// assume user will always enter valid choice, don't handle reprompting //
+// test what getHumanChoice returns with console.log //   
 
 
 
@@ -43,10 +51,3 @@ console.log(getComputerChoice)
 
 
 
-
-
-
-
-
-
-console.log("Hello World")
