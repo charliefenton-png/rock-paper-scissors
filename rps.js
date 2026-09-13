@@ -1,10 +1,5 @@
 
 
-const rock = "rock"
-const paper = "paper"
-const scissors = "scissors"
-
-
 /* Create a new function named getComputerChoice.
 Write the code so that getComputerChoice 
 will randomly return one of the following string values: “rock”, “paper” or “scissors”.
@@ -14,9 +9,17 @@ to conditionally return one of the multiple choices. */
 
 
 
+// create function called getComputerChoice //
+// getComputeChoice randomly return one of following string values "rock", "paper" or "scissors" //
+// use Math.random method to conditionally return of of "rock", "paper" or "scissors" //
 
 
+const rock = "rock";
+const paper = "paper";
+const scissors = "scissors";
+const options = ['rock','paper','scissors']
 
+getComputerChoice = options[Math.floor(Math.random()*options.length)]
 
 
 
