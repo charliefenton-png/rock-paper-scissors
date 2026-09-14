@@ -21,8 +21,11 @@ const options = ['rock','paper','scissors']
 
 
 
-getComputerChoice = options[Math.floor(Math.random()*options.length)]
-console.log(getComputerChoice + " computers choice")
+function getComputerChoice() {
+  const options = ['rock', 'paper', 'scissors'];
+  return options[Math.floor(Math.random() * options.length)];
+}
+
 
 
 
@@ -45,14 +48,19 @@ Test what your function returns by using console.log. */
 
 
 
-getHumanChoice = window.prompt("rock, paper or scissors?");
-  console.log(getHumanChoice + " humans choice");
+function getHumanChoice() {
+  return window.prompt("rock, paper or scissors?");
+}
 
 
 
-console.log(getComputerChoice);
-console.log(getHumanChoice);
+getComputerChoice()
+console.log(getComputerChoice)
+console.log(options)
 
+
+getHumanChoice()
+console.log(getHumanChoice)
 
 /* Declare the players score variables
 Your game will keep track of the players score. 
