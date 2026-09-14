@@ -19,8 +19,11 @@ const paper = "paper";
 const scissors = "scissors";
 const options = ['rock','paper','scissors']
 
-getComputerChoice = options[Math.floor(Math.random()*options.length)]
-console.log(getComputerChoice + " computers choice")
+
+function getComputerChoice() {
+  const options = ['rock', 'paper', 'scissors'];
+  return options[Math.floor(Math.random() * options.length)];
+}
 
 
 
@@ -42,11 +45,15 @@ Test what your function returns by using console.log. */
 // test what getHumanChoice returns with console.log //   
 
 
-getHumanChoice = window.prompt("rock, paper or scissors?");
-  console.log(getHumanChoice + " humans choice");
+
+function getHumanChoice() {
+  return window.prompt("rock, paper or scissors?")
+}
 
 
 
+console.log(getComputerChoice);
+console.log(getHumanChoice);
 
 
 /* Declare the players score variables
@@ -86,8 +93,8 @@ Increment the humanScore or computerScore variable based on the round winner. */
 
 
 
-function playRound(humanChoice,computerChoice) {
-
+function playRound(humanChoice, computerChoice) {
+ 
 }
 
 
