@@ -87,7 +87,7 @@ Increment the humanScore or computerScore variable based on the round winner. */
 
 
 function playRound(humanChoice,computerChoice) {
-     
+
 }
 
 
