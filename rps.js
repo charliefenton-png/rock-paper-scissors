@@ -48,9 +48,9 @@ Test what your function returns by using console.log. */
 
 
 
-
 function getHumanChoice() {
-  return window.prompt("rock, paper or scissors?");
+  const choice = window.prompt("rock, paper or scissors?");
+  return choice.toLowerCase();
 }
 
 console.log(getHumanChoice());
@@ -95,8 +95,13 @@ Increment the humanScore or computerScore variable based on the round winner. */
 
 
 function playRound(humanChoice, computerChoice) {
- 
-}
+  humanChoice(getHumanChoice());
+  ComputerChoice(getComputerChoice());
+   if (humanChoice === computerChoice) {
+      console.log( "It's a tie! you both picked rock");
+   }
 
+
+ }
 
 
