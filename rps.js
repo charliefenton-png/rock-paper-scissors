@@ -26,7 +26,7 @@ function getComputerChoice() {
   return options[Math.floor(Math.random()*options.length)]; 
   }
 
-console.log(getComputerChoice());
+
 
 
 /* Create a new function named getHumanChoice.
@@ -53,7 +53,7 @@ function getHumanChoice() {
   return choice.toLowerCase();
 }
 
-console.log(getHumanChoice());
+
 
 
 
@@ -93,8 +93,8 @@ Increment the humanScore or computerScore variable based on the round winner. */
 // increment the humanScore or computerScore variable base on the round winner //     
 
 
-
-
+const humanChoice = console.log(getHumanChoice() + " humans choice");
+const computerChoice = console.log(getComputerChoice()+ " computers choice");
 
 function playRound(humanChoice, computerChoice) {
 }
