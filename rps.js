@@ -1,3 +1,6 @@
+
+
+
 const options = ['rock','paper','scissors']
 
 let humanScore = 0
@@ -8,7 +11,6 @@ function getComputerChoice() {
   return options[Math.floor(Math.random()*options.length)]; 
 }
   
-
 
 function getHumanChoice() {
   const choice = window.prompt("rock, paper or scissors?");
@@ -35,7 +37,7 @@ Increment the humanScore or computerScore variable based on the round winner. */
 // make function's humanChoice parameter case-insensitive //
 /* write code for playRound function to console.log a string value 
      representing the round winner */
-// increment the humanScore or computerScore variable base on the round winner //     
+// increment the humanScore or computerScore variable based on the round winner //     
 
 
 const humanChoice = getHumanChoice();
@@ -50,16 +52,23 @@ function playRound(humanChoice, computerChoice) {
         (humanChoice === "paper" && computerChoice === "rock") ||
         (humanChoice === "scissors" && computerChoice === "paper")
     ) {
+        humanScore++;
         return "You win!";
     } else {
+        computerScore++;
         return "You lose!";
     }
 }
 
-
 console.log(`Human chose: ${humanChoice}`);
 console.log(`Computer chose: ${computerChoice}`);
 console.log(playRound(humanChoice, computerChoice));
+console.log(`humanScore: ${humanScore}`);
+console.log(`computerScore: ${computerScore}`);
+
+
+
+
 
 
   
