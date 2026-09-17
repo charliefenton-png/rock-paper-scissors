@@ -57,11 +57,10 @@ function playRound(humanChoice, computerChoice) {
 }
 
 
-
-
-
-
+console.log(`Human chose: ${humanChoice}`);
+console.log(`Computer chose: ${computerChoice}`);
 console.log(playRound(humanChoice, computerChoice));
+
 
   
 
