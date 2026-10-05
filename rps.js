@@ -44,9 +44,13 @@ function playRound(humanChoice, computerChoice) {
 playGame();
    
 
+const rockBtn = document.querySelector(".rock");
+  rockBtn.addEventListener('click',(event) => {
+    console.log('clicked');
+});
 
-  
 
+const paperBtn = document.querySelector("paper");
 
- 
+const scissorsBtn = document.querySelector("scissors");
 
