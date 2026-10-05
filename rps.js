@@ -17,21 +17,7 @@ function playGame() {
 let humanScore = 0
 let computerScore = 0
     
-function playRound(humanChoice, computerChoice) {
-    if (humanChoice === computerChoice) {
-        return "It's a tie!";
-    } else if (
-        (humanChoice === "rock" && computerChoice === "scissors") ||
-        (humanChoice === "paper" && computerChoice === "rock") ||
-        (humanChoice === "scissors" && computerChoice === "paper")
-    ) {
-        humanScore++;
-        return "You win!";
-    } else {
-        computerScore++;
-        return "You lose!";
-    }
-}   
+  
 
     for (let i = 0; i < 5; i++) {
     const humanChoice = getHumanChoice();
@@ -47,10 +33,22 @@ playGame();
 
 const buttons = document.querySelectorAll("button");
  
-buttons.forEach((button) => {
-    
-  button.addEventListener("click", () => {
-      alert(button.id);
-  });
-});
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        return "It's a tie!";
+    } else if (
+        (humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper")
+    ) {
+        humanScore++;
+        return "You win!";
+    } else {
+        computerScore++;
+        return "You lose!";
+    }
+} 
 
+buttons.forEach(function(button) {
+  button.addEventListener('click', playRound);
+});
