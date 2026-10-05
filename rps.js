@@ -1,6 +1,7 @@
 const options = ['rock','paper','scissors']
 
 
+
 function getComputerChoice() {
   return options[Math.floor(Math.random()*options.length)]; 
 }
@@ -44,13 +45,12 @@ function playRound(humanChoice, computerChoice) {
 playGame();
    
 
-const rockBtn = document.querySelector(".rock");
-  rockBtn.addEventListener('click',(event) => {
-    console.log('clicked');
+const buttons = document.querySelectorAll("button");
+ 
+buttons.forEach((button) => {
+    
+  button.addEventListener("click", () => {
+      alert(button.id);
+  });
 });
-
-
-const paperBtn = document.querySelector("paper");
-
-const scissorsBtn = document.querySelector("scissors");
 
