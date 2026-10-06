@@ -1,7 +1,11 @@
 const options = ['rock', 'paper', 'scissors'];
+const finalResultsDiv = document.querySelector("#finalResults")
 
 let humanScore = 0;
 let computerScore = 0;
+
+
+
 
 function getComputerChoice() {
   return options[Math.floor(Math.random() * options.length)];
@@ -9,7 +13,7 @@ function getComputerChoice() {
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
-    return "It's a tie!";
+    return "Draw";
   } else if (
     (humanChoice === "rock" && computerChoice === "scissors") ||
     (humanChoice === "paper" && computerChoice === "rock") ||
@@ -23,22 +27,34 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-const rockButton = document.querySelector("#rock");
-const paperButton = document.querySelector("#paper");
-const scissorsButton = document.querySelector("#scissors");
+const results = document.querySelector("#results");
 
-rockButton.addEventListener("click", () => {
-  console.log(playRound("rock", getComputerChoice()));
-  console.log(`Human: ${humanScore}, Computer: ${computerScore}`);
-});
+function handleClick(humanChoice) {
+  const computerChoice = getComputerChoice();
+  const outcome = playRound(humanChoice, computerChoice);
+  results.textContent = `${outcome} Human: ${humanScore}, Computer: ${computerScore}`;
 
-paperButton.addEventListener("click", () => {
-  console.log(playRound("paper", getComputerChoice()));
-  console.log(`Human: ${humanScore}, Computer: ${computerScore}`);
-});
+  if (humanScore >= 5) {
+    finalResultsDiv.textContent = "You win!";
+  } else if (computerScore >= 5) {
+    finalResultsDiv.textContent = "You lose!";
+  }
+}
+  
 
-scissorsButton.addEventListener("click", () => {
-  console.log(playRound("scissors", getComputerChoice()));
-  console.log(`Human: ${humanScore}, Computer: ${computerScore}`);
-});
 
+document.querySelector("#rock").addEventListener("click", () => handleClick("rock"));
+document.querySelector("#paper").addEventListener("click", () => handleClick("paper"));
+document.querySelector("#scissors").addEventListener("click", () => handleClick("scissors"));
+
+
+
+
+
+/* Two things you may want to handle next:
+
+The game keeps going after 5. Players can still click and push the score to 6, 7, and so on. 
+You could disable the buttons when someone reaches 5, or reset the scores
+ and clear the message when a new game starts.
+Checking for a winner is a good candidate for its own function, 
+e.g. checkWinner(), called from handleClick. It keeps handleClick short as the game grows. */
