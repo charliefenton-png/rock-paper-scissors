@@ -34,11 +34,26 @@ function handleClick(humanChoice) {
   const outcome = playRound(humanChoice, computerChoice);
   results.textContent = `${outcome} Human: ${humanScore}, Computer: ${computerScore}`;
 
+
+
   if (humanScore >= 5) {
-    finalResultsDiv.textContent = "You win!";
+    finalResultsDiv.textContent = "You won! Reload to play again"
+    document.getElementById("rock").disabled = true
+    document.getElementById("paper").disabled = true
+    document.getElementById("scissors").disabled = true;
   } else if (computerScore >= 5) {
-    finalResultsDiv.textContent = "You lose!";
+    finalResultsDiv.textContent = "You lost! Reload to play again!"
+    document.getElementById("rock").disabled = true
+    document.getElementById("paper").disabled = true
+    document.getElementById("scissors").disabled = true;
   }
+
+
+
+
+
+
+
 }
   
 
@@ -48,6 +63,8 @@ document.querySelector("#paper").addEventListener("click", () => handleClick("pa
 document.querySelector("#scissors").addEventListener("click", () => handleClick("scissors"));
 
 
+ 
+  
 
 
 
