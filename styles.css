@@ -1,0 +1,60 @@
+.btnContainer {
+display: flex;
+flex-direction: row; 
+justify-content: center;
+height: 50px;
+margin-top: 250px;
+gap: 50px;   
+}
+
+
+#rock {
+min-width: 100px;  
+max-width: 100px; 
+border-radius: 8px;
+background-color: darkseagreen; 
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+
+#paper {
+min-width: 100px;  
+max-width: 100px;
+border-radius: 8px;
+background-color: darkseagreen;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);  
+}
+
+
+
+#scissors {
+min-width: 100px;  
+max-width: 100px;
+border-radius: 8px; 
+background-color: darkseagreen;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6); 
+}
+
+
+
+#results {
+display: flex;
+justify-content: center; 
+margin-top: 70px;
+background-color: rgb(207, 196, 211);
+width: fit-content;
+margin-left: auto;
+margin-right: auto;
+padding: 10px;       
+}
+
+#finalResults {
+display: flex;
+justify-content: center;
+margin-top: 70px; 
+background-color: rgb(207, 196, 211);
+width: fit-content;
+margin-left: auto;
+margin-right: auto;
+padding: 10px;       
+}
